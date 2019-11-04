@@ -1,0 +1,19 @@
+<div class="year">{{time}}</div>
+<div class="linepage">
+    <div class="line"></div>
+    <div>
+        <button class="upload-button" mat-fab>+</button>
+        <div class="event" *ngFor="let i of resultArr" >
+                <div class="date">
+                    {{i.date}}
+                </div>
+                <div class="image">
+                    <img src='https://das-lab.org/cse331fa2019/PhotosBackend/{{i.src}}' height ="300px" >
+                </div>
+                <div class="description">
+                    {{i.description}}
+                </div>
+        </div>
+    </div>
+</div>
+

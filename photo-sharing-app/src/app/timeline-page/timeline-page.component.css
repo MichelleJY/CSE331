@@ -1,0 +1,31 @@
+.year{
+    color: black;
+    font-size: 50px;
+    padding: 25px 50px 75px 50px;
+}
+.event{
+    display: flex;
+    flex-direction: row;
+    margin: 25px 50px 75px 10px;
+    font-size: 25px;
+}
+.image{
+    margin-left: 50px;
+}
+.description{
+    margin-left: 50px;
+}
+.line{
+    border-left: 6px solid #ff9900;
+    height: auto;
+    margin-left: 100px;
+}
+.linepage{
+    display: flex;
+    flex-direction: row;
+}
+.upload-button{
+    background-color: #ff9900;
+    font-size: 40px;
+    margin-left: 20px;
+}

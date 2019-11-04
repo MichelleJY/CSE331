@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { TimelinePageComponent } from './timeline-page/timeline-page.component';
 
-
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', redirectTo: '/timeline', pathMatch: 'full' },
+  { path: 'timeline', component: TimelinePageComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
