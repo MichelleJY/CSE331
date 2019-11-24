@@ -14,6 +14,11 @@ public class DemoApplication {
       return "redirect:/";
     }
 
+    @RequestMapping("/timeline")
+    String timeline() {
+      return "redirect:/timeline";
+    }
+
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
     }
