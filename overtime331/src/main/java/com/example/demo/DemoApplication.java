@@ -9,8 +9,13 @@ import org.springframework.stereotype.*;
 @SpringBootApplication
 public class DemoApplication {
 
-    @RequestMapping("/**")
+    @RequestMapping("/home")
     String home() {
+      return "redirect:/";
+    }
+
+    @RequestMapping("/timeline")
+    String timeline() {
       return "redirect:/";
     }
 
