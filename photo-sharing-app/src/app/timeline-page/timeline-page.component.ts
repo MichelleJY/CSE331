@@ -52,13 +52,13 @@ export class TimelinePageComponent implements OnInit {
       //push to globle variable
       this.globalResultArr.push(temp);
       if(this.globalResultArr.length == this.groupPhotosInfo.length){
-        this.sortByTime(this.globalResultArr);
+        this.globalResultArr = this.sortByTime(this.globalResultArr);
         for(let entry of this.globalResultArr){
           if(entry.cover == true){
             this.resultArr.push(entry);
           }
         }
-        this.chageGlobals();
+        // this.chageGlobals();
       }
     },
     err => {console.log('HTTP error',err);
@@ -118,9 +118,10 @@ export class TimelinePageComponent implements OnInit {
     return monthNameAbb[+month-1] + " " + date;
   }
 
-  private chageGlobals(){
-    this.globals.globalOnePhotoArr = this.globalResultArr;
-  }
+  // private chageGlobals(){
+  //   this.globals.globalOnePhotoArr = this.globalResultArr;
+  //   console.log(this.globals.globalOnePhotoArr);
+  // }
 
   public sortByTime(a:PhotoDetail[]){
 
@@ -145,6 +146,7 @@ export class TimelinePageComponent implements OnInit {
   
       return 0;
   });
+  return sortedArray;
   
 
   }
