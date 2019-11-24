@@ -3,8 +3,7 @@ import { HttpClient, HttpHeaders,HttpErrorResponse } from '@angular/common/http'
 
 import { Observable, of, throwError } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
-import { ViewPhotoModule } from './viewPhoto.module';
-import { GetPhotosModule} from './getPhotos.module';
+import { GetPhotosModule, ViewPhotoModule } from './all-modules';
 
 
 

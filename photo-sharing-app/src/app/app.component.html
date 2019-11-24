@@ -1,8 +1,6 @@
-<button class = "user" mat-raised-button color="#ff9900" [matMenuTriggerFor]="menu">User</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item>Friends</button>
-  <button mat-menu-item>Discover</button>
-  <button mat-menu-item>Settings</button>
-  <button mat-menu-item>Logout</button>
-</mat-menu>
+<a class="home links" routerLink = '/home'>Home</a>
+<a class="discover links" routerLink = '/'>Discover</a>
+<a class="timeline links" routerLink = '/timeline'>Timeline</a>
+
+
 <router-outlet></router-outlet>

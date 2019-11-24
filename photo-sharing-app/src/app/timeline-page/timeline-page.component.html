@@ -1,19 +1,64 @@
-<div class="year">{{time}}</div>
+<!-- <div class="textcircle"><br>
+    <div class="year">{{year.substring(0,1)}}<br>{{year.substring(1,2)}}<br>{{year.substring(2,3)}}<br>{{year.substring(3)}}<br></div>
+    <div class = "line2"></div>
+</div>
 <div class="linepage">
     <div class="line"></div>
     <div>
-        <button class="upload-button" mat-fab>+</button>
+        <div class = "today">
+            <div class="textcircle2"><br>
+                <div class = "today-text">Today</div>
+            </div>
+            <button id="upload-btn" >
+                    <i class="material-icons plus"> add_circle </i>
+            </button>
+        </div>
         <div class="event" *ngFor="let i of resultArr" >
-                <div class="date">
-                    {{i.date}}
-                </div>
-                <div class="image">
+            <div class="textcircle2"><br>    
+                <div class="today-text">{{i.create_date.substring(0,4)}}<br>{{i.create_date.substring(5)}}</div>
+            </div>
+            <div class = "customcard">
+                <a class="image" routerLink="/detail/{{i.albumId}}">
                     <img src='https://das-lab.org/cse331fa2019/PhotosBackend/{{i.src}}' height ="300px" >
+                </a>
+                <div class = "line3"></div>
+                <div>
+                    <div class="eventinfo">
+                            #{{i.event}}
+                    </div>
+                    <div class="description">
+                            {{i.description}}
+                    </div>
                 </div>
-                <div class="description">
-                    {{i.description}}
-                </div>
+                
+            </div>
         </div>
     </div>
-</div>
+</div> -->
 
+<div class = title>Timeline</div>
+<div class = year>{{year}}</div>
+<div class= today>
+    <div>
+        <div class = "today-text">Today</div>
+        <div class = descp>Think of anything fun today?</div>
+    </div>
+    <button id="upload-btn" >
+            <i class="material-icons plus"> add_circle </i>
+    </button>
+</div>
+<!-- TODO: change to let i of resultArr-->
+<div class="event" *ngFor="let i of resultArr"  >
+    <a class= date-descp routerLink="/detail/{{i.event}}">
+        <div class=date>{{i.parsed_date.substring(5)}}</div>
+        <div class = month>{{i.parsed_date.substring(0,3)}}</div>
+        <div class= eventinfo>#{{i.event}}</div>
+        <div class = line1></div>
+        <div class= descp>{{i.description}}</div>
+    </a>
+    <!-- <img class = image2 src='../../assets/dots1.png' height ="450px" width = "400px"> -->
+    <a class="image" routerLink="/detail/{{i.event}}">
+        <img src='https://das-lab.org/cse331fa2019/PhotosBackend/{{i.src}}' height ="350px" >
+    </a>
+
+</div>

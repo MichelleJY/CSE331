@@ -11,13 +11,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule, MatButton} from '@angular/material/button';
+import { EventPageComponent } from './event-page/event-page.component';
+import {MatCardModule} from '@angular/material/card';
+import { HomePageComponent } from './home-page/home-page.component';
+import {ScrollingModule} from '@angular/cdk/scrolling';
+
+
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TimelinePageComponent
+    TimelinePageComponent,
+    EventPageComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +33,9 @@ import {MatButtonModule, MatButton} from '@angular/material/button';
     BrowserAnimationsModule,
     MatMenuModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule,
+    ScrollingModule
     // // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // // and returns simulated server responses.
     // // Remove it when a real server is ready to receive requests.

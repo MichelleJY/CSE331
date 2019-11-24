@@ -1,5 +1,5 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import { ViewPhotoModule } from './viewPhoto.module';
+// import { ViewPhotoModule } from './all';
 import { Injectable } from '@angular/core';
 
 @Injectable({
