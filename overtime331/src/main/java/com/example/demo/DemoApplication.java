@@ -9,11 +9,10 @@ import org.springframework.stereotype.*;
 @SpringBootApplication
 public class DemoApplication {
 
-    // @RequestMapping("/")
-    // @ResponseBody
-    // String home() {
-    //   return "index";
-    // }
+    @RequestMapping("/home")
+    String home() {
+      return "redirect:/";
+    }
 
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
