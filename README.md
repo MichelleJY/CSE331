@@ -18,13 +18,19 @@ npm install -g @angular/cli
 cd photo-sharing-app
 ```
 
-3. Run the server
+3. Install dependencies
+
+```
+npm install
+```
+
+4. Run the server
 
 ```
 ng serve --open
 ```
 
-4. The app should be running on localhost:4200
+5. The app should be running on localhost:4200
 
 Have fun! :)
 
