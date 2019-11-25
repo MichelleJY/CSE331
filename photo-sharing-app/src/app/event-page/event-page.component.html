@@ -1,25 +1,26 @@
 <!-- <div class = wrapper-wrapper> -->
 <cdk-virtual-scroll-viewport itemSize=50 class="left">
-        <div class = id>#{{id}}</div>
+    <div class=id>#{{id}}</div>
 
     <div *cdkVirtualFor="let item of sortedAlbumArr" class="example-item">
-            <img class ="clickimg" (click) ="displayImg(item.src, item.parsed_date, item.description)" src='https://das-lab.org/cse331fa2019/PhotosBackend/{{item.src}}' height ="250px" > 
-            <!-- <div *ngIf="oneAlbum(item.albumId)" class = "album-line"></div>    -->
+        <img class="clickimg" (click)="displayImg(item.src, item.parsed_date, item.description)"
+            src='https://das-lab.org/cse331fa2019/PhotosBackend/{{item.src}}' height="250px">
     </div>
-</cdk-virtual-scroll-viewport>    
+</cdk-virtual-scroll-viewport>
 <!-- </div>   -->
-<div class = "right">
+<div class="right">
     <div></div>
-    <a class="home links" routerLink = '/home'><div>Home</div></a>
-    <a class="discover links" routerLink = '/'><div>Discover</div></a>
-    <a class="timeline links" routerLink = '/timeline'><div>Timeline</div></a>
+    <a class="home links" routerLink='/home'>Home</a>
+    <a class="discover links" routerLink='/discover'>Discover</a>
+    <a class="timeline links" routerLink='/timeline'>Timeline</a>
     <div *ngIf="displayimg; else elseBlock">
-        <div class = "displaydate">{{displaydate}}</div>
-        <div class = "displaydescp">{{displaydescp}}</div> 
-        <img class = "displayimg" src='https://das-lab.org/cse331fa2019/PhotosBackend/{{displayimg}}'>
+        <div class="displaydate">{{displaydate}}</div>
+        <div class="displaydescp">{{displaydescp}}</div>
+
+        <img class="displayimg" src='https://das-lab.org/cse331fa2019/PhotosBackend/{{displayimg}}'>
 
     </div>
-    <ng-template #elseBlock >
+    <ng-template #elseBlock>
         <div class="explain">
             click on an image to see detail<br>or scroll left panel to see more
         </div>

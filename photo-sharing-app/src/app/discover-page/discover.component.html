@@ -1,0 +1,24 @@
+<!-- <div class = wrapper-wrapper> -->
+    <cdk-virtual-scroll-viewport itemSize=50 class="left">
+        <div class = id>#{{id}}</div>
+
+</cdk-virtual-scroll-viewport>    
+<!-- </div>   -->
+<div class = "right">
+    <a class="home links" routerLink = '/home'>Home</a>
+    <a class="discover links" routerLink = '/discover' (click)="refresh()">Discover</a>
+    <a class="timeline links" routerLink = '/timeline'>Timeline</a>
+    <div >
+        <div class = "displaydate">{{displaydate}}</div>
+        <div class = "displaydescp">{{displaydescp}}</div> 
+
+        <img class = "displayimg" src='https://das-lab.org/cse331fa2019/PhotosBackend/{{displayimg}}'>
+
+    </div>
+    <ng-template #elseBlock >
+        <div class="explain">
+            click on an image to see detail<br>or scroll left panel to see more
+        </div>
+    </ng-template>
+
+</div>

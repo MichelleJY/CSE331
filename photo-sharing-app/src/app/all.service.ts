@@ -15,7 +15,7 @@ export class AllService {
 
   constructor(
     private http: HttpClient) { }
-  
+
   private viewPhotoUrl = '/viewPhoto.php';
   getViewPhoto(id: String):Observable<ViewPhotoModule[]>{
     // return this.http.get<ViewPhotoModule[]>(this.mockUrl)
@@ -32,6 +32,22 @@ export class AllService {
       catchError(this.handleError)
     );
   }
+
+  getRandomPhotos():Observable<Object[]> {
+    return this.http.get<Object[]>(this.baseUrl + this.getPhotosUrl + '?grp_id=' + '23333')
+    .pipe(
+      catchError(this.handleError)
+    )
+  }
+
+  private uploadPhotosUrl = '/uploadPhoto.php';
+  postOne(form): Observable<Object> {
+    return this.http.post(`${this.baseUrl}${this.uploadPhotosUrl}`, form).pipe(
+      map((res) => {
+        // console.log(res);
+        return res;
+    }))
+  };
 
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {

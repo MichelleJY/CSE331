@@ -1,0 +1,185 @@
+#upload-btn {
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    border: 3px dashed #803300;
+    border-radius: 20px;
+    background-color: rgb(247, 225, 201);
+}
+
+#upload-btn:hover{
+    transform: scale(1.05);
+    .plus {
+        transform: scale(1.2);
+    }
+}
+
+.plus {
+    font-size: 45px !important;
+    color: white;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.img-preview {
+    height: 150px;
+    width: 150px;
+    border-radius: 20px;
+    :hover {
+        transform: scale(1.05);
+    }
+}
+
+.img-preview-div {
+    position: relative;
+    width: 150px;
+    margin-right: 20px;
+    // flex-grow: 1;
+    :hover {
+        transform: scale(1.05);
+    }
+}
+
+.img-preview-div:hover .clear-btn {
+    display: block;
+    z-index: 1;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    direction: ltr;
+}
+
+.textfields{
+    margin-top: 30px;
+    width:100%;
+}
+
+.clear-btn{
+    display: none;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 40px;
+    width: 40px;
+}
+
+.clear {
+    color: white;
+    margin: none !important;
+    line-height: 1.4 !important;
+}
+
+#desc{
+    height: 100px;
+    width: 100%;
+
+}
+#tag{
+    height: auto;
+    width: 60%;
+    margin-left: 30px;
+}
+.div {
+    margin-bottom: 30px;
+}
+.upload-div{
+    position: relative;
+    width: 26px;
+    align-items: center;
+    :hover {
+        cursor: pointer;
+    }
+    
+}
+#upload-confirm-btn{
+    position: absolute;
+    right: 20vw;
+    border-radius: 1px;
+    border: none;
+    background-color: #803300;
+    font-size: 20px;
+    padding: 4px;
+    color: #ffe5cc;
+    :hover {
+        cursor: pointer;
+    }
+}
+
+.home{
+    position: absolute;
+    right: 450px;
+    top: 20px;
+}
+
+.discover{
+    position: absolute;
+    right: 250px;
+    top: 20px;
+}
+
+.timeline{
+    position: absolute;
+    right: 50px;
+}
+
+.right{
+    width:85vw;
+    height: 100vh;
+    background-color:#ffe5cc;
+    position: fixed;
+    right:0px;
+    top:0px;
+}
+
+.upload-div{
+    width: 60vw;
+    height: 100%;
+    align-content: center;
+    left: 20vw;
+    top: 40px;
+}
+.upload-title{
+    color: #ffe5cc;
+    font-weight: normal;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.links{
+    color: #803300;
+    text-decoration: underline;
+    font-family: Gill Sans, sans-serif;
+    font-size: 25px;
+    letter-spacing: 2px;
+    font-weight: lighter;
+    opacity:0.6;
+}
+
+.home{
+    position: absolute;
+    right: 450px;
+    top: 20px;
+}
+
+.discover{
+    position: absolute;
+    right: 250px;
+    top: 20px;
+    :hover {
+        cursor: pointer;
+    }
+}
+
+.timeline{
+    position: absolute;
+    right: 50px;
+    top: 20px;
+}
