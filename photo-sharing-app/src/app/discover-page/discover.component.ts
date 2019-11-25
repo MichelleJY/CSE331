@@ -78,6 +78,8 @@ export class DiscoverComponent {
         };
         //push to globle variable
         this.groupPhotosInfo = temp
+        this.id = id;
+        this.displayImg(this.groupPhotosInfo.src, this.getDate(this.groupPhotosInfo.create_date), this.groupPhotosInfo.description);
         console.log(this.groupPhotosInfo)
       },
       err => {
