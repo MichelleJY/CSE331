@@ -1,17 +1,14 @@
 <!-- <div class = wrapper-wrapper> -->
-<cdk-virtual-scroll-viewport itemSize=50 class="left">
+    <cdk-virtual-scroll-viewport itemSize=50 class="left">
         <div class = id>#{{id}}</div>
 
-    <div *cdkVirtualFor="let item of sortedAlbumArr" class="example-item">
-            <img class ="clickimg" (click) ="displayImg(item.src, item.parsed_date, item.description)" src='https://das-lab.org/cse331fa2019/PhotosBackend/{{item.src}}' height ="250px" >    
-    </div>
 </cdk-virtual-scroll-viewport>    
 <!-- </div>   -->
 <div class = "right">
     <a class="home links" routerLink = '/home'>Home</a>
-    <a class="discover links" routerLink = '/discover'>Discover</a>
+    <a class="discover links" routerLink = '/discover' (click)="refresh()">Discover</a>
     <a class="timeline links" routerLink = '/timeline'>Timeline</a>
-    <div *ngIf="displayimg; else elseBlock">
+    <div >
         <div class = "displaydate">{{displaydate}}</div>
         <div class = "displaydescp">{{displaydescp}}</div> 
 
