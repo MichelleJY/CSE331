@@ -50,7 +50,7 @@
             <i class="material-icons plus"> add_circle </i>
     </button>
 </div>
-<!-- TODO: change to let i of resultArr-->
+
 <div class="event" *ngFor="let i of resultArr"  >
     <a class= date-descp routerLink="/detail/{{i.event}}">
         <div class=date>{{i.parsed_date.substring(5)}}</div>

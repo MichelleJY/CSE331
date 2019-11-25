@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { AllService } from '../all.service';
@@ -39,7 +39,7 @@ export class EventPageComponent implements OnInit {
 
   sortedAlbumArr:PhotoDetail[] = [];
 
-  currentAlbumId:String;
+  currentAlbumId:String = "";
 
   displayimg;
   displaydate;
@@ -82,6 +82,16 @@ export class EventPageComponent implements OnInit {
       }
     }
     return result;
+  }
+
+  oneAlbum(albumId:String){
+    // if(this.currentAlbumId != albumId){
+    //   this.currentAlbumId = albumId;
+    //   return true;
+    // }
+    // return false;
+    return true;
+
   }
 
 

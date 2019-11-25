@@ -108,3 +108,9 @@
     right: 50px;
     top: 20px;
 }
+
+.album-line{
+    border-top: 2px white;
+    width: 20px;
+
+}
