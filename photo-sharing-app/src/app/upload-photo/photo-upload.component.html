@@ -1,45 +1,75 @@
 <div>
     <h2 class="upload-title">Upload<br> A<br> Photo</h2>
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" -->
-        <!-- integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <!-- integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
     <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
-    <div class = "right">
-        <a class="home links" routerLink = '/home'>Home</a>
-        <a class="discover links" routerLink = '/discover'>Discover</a>
-        <a class="timeline links" routerLink = '/timeline'>Timeline</a>
-    
+    <div class="right">
+        <a class="home links" routerLink='/home'>Home</a>
+        <a class="discover links" routerLink='/discover'>Discover</a>
+        <a class="timeline links" routerLink='/timeline'>Timeline</a>
+
     </div>
 
     <div class="upload-div">
-            <div class="container">
-        <div class="img-preview-div" *ngFor="let image of imageArr">
-            <button class="clear-btn" (click)="removeImg(image)">
-                <i class="material-icons clear"> clear </i>
+        <div class="container">
+            <div class="img-preview-div" *ngFor="let image of imageArr">
+                <button class="clear-btn" (click)="removeImg(image)">
+                    <i class="material-icons clear"> clear </i>
+                </button>
+                <img src={{image}} class="img-preview" />
+            </div>
+            <input type="file" accept="image/*" (change)="onChanged($event)" #file>
+            <button id="upload-btn" (click)="file.click()">
+                <i class="material-icons plus"> add_circle </i>
             </button>
-            <img src={{image}} class="img-preview" />
-        </div>
-        <input type="file" accept="image/*" (change)="onChanged($event)" #file>
-        <button id="upload-btn" (click)="file.click()">
-            <i class="material-icons plus"> add_circle </i>
-        </button>
-    </div>
 
-    <div class="textfields">
-        <div class="container-fluid div">
-            <!-- <label>Description</label> -->
-            <textarea  id="desc"  [(ngModel)]="des" placeholder="Say something..."></textarea>
         </div>
-        <div class="container-fluid div">
-            <label>Add an event tag</label>
-            <input id="tag" [(ngModel)]="eventTag" type="text" placeholder="Tag it...">
-        </div>
-        <div class="upload-div">
-                <button id="upload-confirm-btn" (click)="upload()">
+
+        <div class="textfields">
+            <div class="container-fluid div">
+                <!-- <label>Description</label> -->
+                <textarea id="desc" [(ngModel)]="des" placeholder="Say something..."></textarea>
+            </div>
+            <div class="container-fluid div">
+                <label>Add an event tag</label>
+                <input id="tag" [(ngModel)]="eventTag" type="text" placeholder="Tag it...">
+            </div>
+            <div class="upload-div">
+                <div>
+                    <button id="cancel-confirm-btn" (click)="cancel()">
+                        Cancel
+                    </button>
+                    <button id="upload-confirm-btn" (click)="upload()">
                         Upload
                     </button>
+                </div>
+
             </div>
+        </div>
+
+
     </div>
-    
+
+</div>
+<div class="pop-up" *ngIf="popup">
+    <div class="pop-up-content">
+        <h3>Confirmation</h3>
+        <br>
+        <p>Do you want to discard all information and go back to timeline?</p>
+        <br>
+        <button id="no-confirm-btn" (click)="cancel()">
+            No
+        </button>
+        <button id="yes-confirm-btn" (click)="exit()">
+            Yes
+        </button>
+    </div>
 </div>
 
+<div class="pop-up" *ngIf="confirm">
+    <div class="pop-up-content">
+        <h3>Confirmation</h3>
+        <br>
+        <p>Your photos are successfully uploaded!</p>
+    </div>
 </div>

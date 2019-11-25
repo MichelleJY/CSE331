@@ -94,10 +94,6 @@ input[type="file"] {
     position: relative;
     width: 26px;
     align-items: center;
-    :hover {
-        cursor: pointer;
-    }
-    
 }
 #upload-confirm-btn{
     position: absolute;
@@ -112,23 +108,32 @@ input[type="file"] {
         cursor: pointer;
     }
 }
-
+#upload-confirm-btn:hover {
+    cursor: pointer;
+}
+#cancel-confirm-btn {
+    position: absolute;
+    right: calc(25vw + 20px);
+    border-radius: 1px;
+    border: none;
+    background-color: #ffe5cc;
+    font-size: 20px;
+    padding: 4px;
+    font-weight: normal;
+    color: #803300;
+    :hover {
+        cursor: pointer;
+    }
+}
+#cancel-confirm-btn:hover {
+    cursor: pointer;
+}
 .home{
     position: absolute;
     right: 450px;
     top: 20px;
 }
 
-.discover{
-    position: absolute;
-    right: 250px;
-    top: 20px;
-}
-
-.timeline{
-    position: absolute;
-    right: 50px;
-}
 
 .right{
     width:85vw;
@@ -148,11 +153,11 @@ input[type="file"] {
 }
 .upload-title{
     position: relative;
-    top: 30px;
+    top: 25px;
     color: white;
     font-size: 35px;
     font-family: Gill Sans, sans-serif;
-    font-weight: bold;
+    font-weight: lighter;
     padding-left: 30px;
     letter-spacing: 2px;
     padding-bottom: 60px;
@@ -169,12 +174,6 @@ input[type="file"] {
     opacity:0.6;
 }
 
-.home{
-    position: absolute;
-    right: 450px;
-    top: 20px;
-}
-
 .discover{
     position: absolute;
     right: 250px;
@@ -188,4 +187,50 @@ input[type="file"] {
     position: absolute;
     right: 50px;
     top: 20px;
+}
+
+.pop-up {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(20,20,20,0.2);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.pop-up-content {
+    position: relative;
+    left: calc(50% - 200px);
+    top: calc(50% - 200px);
+    width: 400px;
+    background-color: white;
+    padding: 40px;
+    padding-bottom: 60px;
+}
+#yes-confirm-btn{
+    position: absolute;
+    right: 40px;
+    border-radius: 1px;
+    border: none;
+    background-color: #803300;
+    font-size: 20px;
+    padding: 4px;
+    color: #ffe5cc;
+
+}
+#yes-confirm-btn:hover {
+    cursor: pointer;
+}
+#no-confirm-btn {
+    position: absolute;
+    right: 110px;
+    border-radius: 1px;
+    border: none;
+    background-color: white;
+    font-size: 20px;
+    padding: 4px;
+    font-weight: normal;
+    color: #803300;
+}
+#no-confirm-btn:hover {
+    cursor: pointer;
 }
