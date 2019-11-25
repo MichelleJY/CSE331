@@ -33,16 +33,16 @@ export class AllService {
     );
   }
 
-  getRandomPhotos():Observable<Object[]> {
-    return this.http.get<Object[]>(this.baseUrl + this.getPhotosUrl + '?grp_id=' + '23333')
+  getRandomPhotos():Observable<GetPhotosModule[]> {
+    return this.http.get<GetPhotosModule[]>(this.baseUrl + this.getPhotosUrl + '?grp_id=' + '23333')
     .pipe(
       catchError(this.handleError)
     )
   }
 
   private uploadPhotosUrl = '/uploadPhoto.php';
-  postOne(form): Observable<Object> {
-    return this.http.post(`${this.baseUrl}${this.uploadPhotosUrl}`, form).pipe(
+  postOne(form): Observable<GetPhotosModule> {
+    return this.http.post<GetPhotosModule>(`${this.baseUrl}${this.uploadPhotosUrl}`, form).pipe(
       map((res) => {
         // console.log(res);
         return res;
