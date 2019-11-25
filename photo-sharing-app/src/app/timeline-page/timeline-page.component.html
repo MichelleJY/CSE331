@@ -50,9 +50,10 @@
             <i class="material-icons plus"> add_circle </i>
     </button>
 </div>
+<div class = "explain"> Click to view more photos about the event. </div>
 
 <div class="event" *ngFor="let i of resultArr"  >
-    <a class= date-descp routerLink="/detail/{{i.event}}">
+    <a class= date-descp routerLink="/detail/{{i.event}}"  title="click me!">
         <div class=date>{{i.parsed_date.substring(5)}}</div>
         <div class = month>{{i.parsed_date.substring(0,3)}}</div>
         <div class= eventinfo>#{{i.event}}</div>
@@ -60,7 +61,7 @@
         <div class= descp>{{i.description}}</div>
     </a>
     <!-- <img class = image2 src='../../assets/dots1.png' height ="450px" width = "400px"> -->
-    <a class="image" routerLink="/detail/{{i.event}}">
+    <a class="image" routerLink="/detail/{{i.event}}" title="click me!">
         <img src='https://das-lab.org/cse331fa2019/PhotosBackend/{{i.src}}' height ="350px" >
     </a>
 
