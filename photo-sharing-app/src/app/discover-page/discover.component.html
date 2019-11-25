@@ -1,14 +1,11 @@
-<!-- <div class = wrapper-wrapper> -->
-    <cdk-virtual-scroll-viewport itemSize=50 class="left">
-        <div class = id>#{{id}}</div>
-
-</cdk-virtual-scroll-viewport>    
-<!-- </div>   -->
+<!-- <div class = wrapper-wrapper> --><!-- </div>   -->
 <div class = "right">
     <a class="home links" routerLink = '/home'>Home</a>
     <a class="discover links" routerLink = '/discover' (click)="refresh()">Discover</a>
     <a class="timeline links" routerLink = '/timeline'>Timeline</a>
     <div >
+            <div class = "id">#{{id}}</div>
+
         <div class = "displaydate">{{displaydate}}</div>
         <div class = "displaydescp">{{displaydescp}}</div> 
 
