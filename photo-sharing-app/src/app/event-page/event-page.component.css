@@ -22,6 +22,7 @@
     position: fixed;
     right:0px;
     top:0px;
+    overflow:auto;
 }
   
   .example-item {
@@ -73,7 +74,7 @@
 
 .displaydescp{
     font-family: Gill Sans, sans-serif;
-    font-size: 30px;
+    font-size: 25px;
     position: relative;
     left: 20px;
     top: 50px;

@@ -147,10 +147,16 @@ input[type="file"] {
     top: 40px;
 }
 .upload-title{
-    color: #ffe5cc;
-    font-weight: normal;
-    margin-top: 20px;
-    margin-left: 10px;
+    position: relative;
+    top: 30px;
+    color: white;
+    font-size: 35px;
+    font-family: Gill Sans, sans-serif;
+    font-weight: bold;
+    padding-left: 30px;
+    letter-spacing: 2px;
+    padding-bottom: 60px;
+    line-height: 1.2;
 }
 
 .links{
