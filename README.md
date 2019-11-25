@@ -8,15 +8,21 @@ This app uses Angular as the framework. Following steps can help you setup quick
 
 1. If you have never used Angular before, install angular cli. 
 
+```
 npm install -g @angular/cli
+```
 
 2. Navigate to the folder photo-sharing-app
 
+```
 cd photo-sharing-app
+```
 
 3. Run the server
 
+```
 ng serve --open
+```
 
 4. The app should be running on localhost:4200
 
